@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageType>Template</PackageType>
+    <IsPackable>true</IsPackable>
+    <PackageVersion>0.7.0</PackageVersion>
+    <PackageId>Vue.Simple.Template</PackageId>
+    <Title>Vue dotnet new templates</Title>
+    <Authors>Jaxel Rojas</Authors>
+    <Description>A minimal template for Vue Js using .Net 6 as backend</Description>
+    <PackageTags>template;vue;vuejs</PackageTags>
+    <PackageProjectUrl>https://github.com/Jaxelr/VueSimpleTemplate</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Jaxelr/VueSimpleTemplate</RepositoryUrl>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>Content</ContentTargetFolders>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoWarn>NU5128</NoWarn>
+    <PackageReleaseNotes>Target to net 6.0</PackageReleaseNotes>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Content\**" Exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**;**\wwwroot\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>
